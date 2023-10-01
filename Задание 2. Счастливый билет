@@ -1,0 +1,19 @@
+print('Пожалуйста, введите номер билета:')
+
+ticket_number = int(input())
+
+while len(str(ticket_number)) != 6:
+    print('Номер билета должен содержать шесть цифр.\nПожалуйста, введите правильный номер билета:')
+    ticket_number = int(input())
+
+d_1 = ticket_number // 100000
+d_2 = ticket_number % 100000 // 10000
+d_3 = ticket_number % 10000 // 1000
+d_4 = ticket_number % 1000 // 100
+d_5 = ticket_number % 100 // 10
+d_6 = ticket_number % 10
+
+if d_1 + d_2 + d_3 == d_4 + d_5 + d_6:
+    print('Счастливый билет')
+else:
+    print('Несчастливый билет')
